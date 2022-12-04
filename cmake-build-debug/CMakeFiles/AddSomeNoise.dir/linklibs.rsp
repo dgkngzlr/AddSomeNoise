@@ -1,0 +1,1 @@
+ "C:/boost_1_80_0/build/lib/libboost_program_options-mgw12-mt-x64-1_80.a" "C:/boost_1_80_0/build/lib/libboost_program_options-mgw12-mt-x64-1_80.a" C:/opencv/build/install/x64/mingw/lib/libopencv_world460.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

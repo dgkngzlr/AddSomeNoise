@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="AddSomeNoise"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AddSomeNoise">
+				<Option output="C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/AddSomeNoise.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/opencv/build/install/include"/>
+					<Add directory="C:/boost_1_80_0/build/include/boost-1_80"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 AddSomeNoise"/>
+					<CompileFile command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AddSomeNoise/fast">
+				<Option output="C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/AddSomeNoise.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/opencv/build/install/include"/>
+					<Add directory="C:/boost_1_80_0/build/include/boost-1_80"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 AddSomeNoise/fast"/>
+					<CompileFile command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -f &quot;C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/dev/CLion-Workspace/AddSomeNoise/main.cpp">
+			<Option target="AddSomeNoise"/>
+		</Unit>
+		<Unit filename="C:/dev/CLion-Workspace/AddSomeNoise/noise.cpp">
+			<Option target="AddSomeNoise"/>
+		</Unit>
+		<Unit filename="C:/dev/CLion-Workspace/AddSomeNoise/noise.h">
+			<Option target="AddSomeNoise"/>
+		</Unit>
+		<Unit filename="C:/dev/CLion-Workspace/AddSomeNoise/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
