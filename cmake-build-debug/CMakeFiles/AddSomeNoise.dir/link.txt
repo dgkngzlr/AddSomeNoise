@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\AddSomeNoise.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\AddSomeNoise.dir/objects.a @CMakeFiles\AddSomeNoise.dir\objects1.rsp
-C:\mingw64\bin\c++.exe -g -Wl,--whole-archive CMakeFiles\AddSomeNoise.dir/objects.a -Wl,--no-whole-archive -o AddSomeNoise.exe -Wl,--out-implib,libAddSomeNoise.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\AddSomeNoise.dir\linklibs.rsp

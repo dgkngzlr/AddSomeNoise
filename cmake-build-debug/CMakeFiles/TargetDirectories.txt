@@ -1,3 +1,0 @@
-C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/CMakeFiles/AddSomeNoise.dir
-C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/dev/CLion-Workspace/AddSomeNoise/cmake-build-debug/CMakeFiles/rebuild_cache.dir

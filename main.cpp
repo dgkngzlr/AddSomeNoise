@@ -1,8 +1,13 @@
+// Usage : AddSomeNoise [PATH] [NOISE-TYPE] [OPT-PARAM]
+// Example : AddSomeNoise /path/to/image --gaussian --stddev 0.5
+// Example : AddSomeNoise /path/to/image --periodic --vstr 0.5 --hstr 0.5
+// For more option use AddSomeNoise --help
+// Default Windows compatible
+// To make the program linux compatible please change path delimiter.
+
 #include <iostream>
 #include <vector>
 #include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <boost/program_options.hpp>
 #include <boost/algorithm/string.hpp>
@@ -16,6 +21,7 @@ int main(int argc, const char *argv[]) {
 
     po::options_description description("Add Some Noise Program Usage:");
 
+    // Program args
     description.add_options()
             ("help", "Display this help message")
             ("path", po::value<string>(), "Input image file path")
@@ -25,8 +31,11 @@ int main(int argc, const char *argv[]) {
             ("speckle", "Add speckle noise to image")
             ("uniform", "Add speckle noise to image")
             ("periodic", "Add periodic noise to image")
-            ("stddev", po::value<double>()->default_value(0.1), "Gaussian standard deviation, default is 0.1")
-            ("amount", po::value<double>()->default_value(0.05), "Amount of salt & pepper, default is 0.05");
+            ("stddev", po::value<double>()->default_value(0.1), "Gaussian standard deviation, default is 0.1 [0, 1]")
+            ("amount", po::value<double>()->default_value(0.05), "Amount of salt & pepper, default is 0.05 [0, 1]")
+            ("mean", po::value<double>()->default_value(0.1), "Mean of poisson, default is 0.1 [0, 1]")
+            ("vstr", po::value<double>()->default_value(0.1), "Vertical strength of periodic noise, default is 0.1 [0, 1]")
+            ("hstr", po::value<double>()->default_value(0.1), "Horizontal strength of periodic noise, default is 0.1 [0, 1]");
 
     po::variables_map vm;
     po::store(po::command_line_parser(argc, argv).options(description).run(), vm);
@@ -39,6 +48,7 @@ int main(int argc, const char *argv[]) {
     string img_path;
     string img_ext;
     string img_name;
+    string type;
 
     if (vm.count("help"))
     {
@@ -71,7 +81,8 @@ int main(int argc, const char *argv[]) {
         double stddev = vm["stddev"].as<double>();
         out_img = noise::add_gaussian_noise(img, stddev);
 
-        cv::imwrite(img_path+img_name+"_gaussian."+img_ext, out_img);
+        cv::imwrite(img_path+img_name+"_gauss."+img_ext, out_img);
+        type = "_gauss";
     }
 
     if (vm.count("sap"))
@@ -80,35 +91,49 @@ int main(int argc, const char *argv[]) {
         out_img = noise::add_sap_noise(img, amount);
 
         cv::imwrite(img_path+img_name+"_sap."+img_ext, out_img);
+        type = "_sap";
     }
 
-    // TODO
+
     if (vm.count("poisson"))
     {
-        std::cout << "Poisson specified" << endl;
+        double mean = vm["mean"].as<double>();
+        out_img = noise::add_poisson_noise(img, mean);
+
+        cv::imwrite(img_path+img_name+"_poisson."+img_ext, out_img);
+        type = "_poisson";
     }
 
-    // TODO
+
     if (vm.count("speckle"))
     {
-        std::cout << "Poisson specified" << endl;
+        out_img = noise::add_speckle_noise(img);
+
+        cv::imwrite(img_path+img_name+"_speckle."+img_ext, out_img);
+        type = "_speckle";
     }
 
-    // TODO
+
     if (vm.count("uniform"))
     {
-        std::cout << "Poisson specified" << endl;
+        out_img = noise::add_uniform_noise(img);
+
+        cv::imwrite(img_path+img_name+"_uni."+img_ext, out_img);
+        type = "_uni";
     }
 
-    // TODO
+
     if (vm.count("periodic"))
     {
-        std::cout << "Poisson specified" << endl;
+        double vstr = vm["vstr"].as<double>();
+        double hstr = vm["hstr"].as<double>();
+        out_img = noise::add_periodic_noise(img, vstr, hstr);
+
+        cv::imwrite(img_path+img_name+"_peri."+img_ext, out_img);
+        type = "_peri";
     }
 
-    cv::imshow("Window", out_img);
-    int key = cv::waitKey(0);
+    cout << "Image " << img_name  << type << "." << img_ext << " saved to location " << img_path << endl;
 
     return  0;
-
 }
